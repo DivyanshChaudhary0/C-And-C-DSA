@@ -3,7 +3,6 @@
 
 #include<stdio.h>
 #include<string.h>
-#include<stdbool.h>
 int check_alphaNumeric_string(char []);
 
 int main(){
@@ -12,21 +11,26 @@ int main(){
     printf("Enter First String: ");
     fgets(str,40,stdin);
     str[strlen(str)-1]='\0';
-    bool check = count_vowels(str);
+    int check = check_alphaNumeric_string(str);
+    if(check==0)
+        printf("Alphanumeric String:");
+    else
+        printf("Not alphanumeric String:");
     return 0;
 }
 
 int check_alphaNumeric_string(char str[]){
-    int i,temp=0;
+    int i,digit=0,alpha=0;
     for(i=0;str[i];i++){
-        if( (str[i]>='a' && str[i]<='z') || (str[i]>='0' && str[i]<='9') ){
-            temp=1;
-            break;
+        if( (str[i]>='a' && str[i]<='z') || (str[i]>='A' && str[i]<='Z') ){
+            alpha=1;
         }
-        else if( (str[i]>='A' && str[i]<='Z') || (str[i]>='0' && str[i]<='9') ){
-            temp=1;
-            break;
+        if(str[i]>='0' && str[i]<='9'){
+            digit=1;
         }
     }
-    return temp;
+    if(digit&alpha)
+        return 0;
+    else
+        return -1;
 }

@@ -7,8 +7,14 @@ int main(){
     printf("Enter Year: ");
     scanf("%d",&year);
 
-    if(year%4){
-        
+    if(year%4==0){
+        if(year%400==0)
+            printf("Leap Year");
+        else
+            printf("Not a leap year");
+    }
+    else{
+        printf("Not a leap year");
     }
     return 0;
 }
