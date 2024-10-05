@@ -3,14 +3,14 @@
 
 #include<stdio.h>
 int main(){
-    int m;
+    int month;
     printf("Enter Number: ");
-    scanf("%d",&m);
+    scanf("%d",&month);
 
-    if(m==4 || m==6 || m==8 || m==10 || m==12){
+    if(month==4 || month==6 || month==8 || month==10 || month==12){
         printf("30 days");
     }
-    else if(m==2){
+    else if(month==2){
         printf("28 or 29 days");
     }
     else{

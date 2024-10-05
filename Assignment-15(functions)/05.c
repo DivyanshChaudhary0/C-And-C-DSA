@@ -1,18 +1,25 @@
 
 #include<stdio.h>
+void n_prime(int);
 int is_prime(int);
 
 int main(){
-    int n,prime;
+    int n;
     printf("Enter a number: ");
     scanf("%d",&n);
-    prime = is_prime(n);
-
-    if(prime)
-        printf("%d is a prime number",n);
-    else
-        printf("%d is not a prime number",n);
+    n_prime(n);
     return 0;
+}
+
+void n_prime(int x){
+    int i=2;
+    while(x){
+        if(is_prime(i)){
+            printf("%d ",i);
+            x--;
+        }
+        i++;
+    }
 }
 
 int is_prime(int x){
@@ -23,6 +30,6 @@ int is_prime(int x){
     }
     if(x==i)
             return 1;
-        else
-            return 0;
+    else
+        return 0;
 }

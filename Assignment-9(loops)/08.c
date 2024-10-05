@@ -1,5 +1,5 @@
 
-// WAP to weather a given number is prime or not ...
+// WAP to check weather a given number is prime or not ...
 
 #include<stdio.h>
 int main(){
