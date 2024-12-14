@@ -7,7 +7,7 @@ int main(){
     printf("Enter Number: ");
     scanf("%d",&month);
 
-    if(month==4 || month==6 || month==8 || month==10 || month==12){
+    if(month==4 || month==6 || month==9 || month==10 || month==12){
         printf("30 days");
     }
     else if(month==2){
