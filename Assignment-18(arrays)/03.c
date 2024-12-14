@@ -19,6 +19,5 @@ int main(){
             sumOdd+=arr[i];
     }
     printf("The sum of even numners is %d and odds is %d",sumEven,sumOdd);
-
     return 0;
 }
